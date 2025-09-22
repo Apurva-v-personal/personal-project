@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 👈 Add this -->
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            background-color: aliceblue;
+            justify-content: space-between
+        }
+
+        .container>div {
+            color: black;
+            background-color: antiquewhite;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .task2 {
+            display: flex;
+            flex-direction: column;
+            background-color: aliceblue;
+            align-items: center;
+        }
+
+        .task2>div {
+            color: black;
+            background-color: antiquewhite;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: gray;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu a {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: aliceblue;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background-color: antiquewhite;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+
+        @media (max-width: 480px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h1>vertical stack</h1>
+    <div class="task2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <h1>task 4</h1>
+    <div class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="login">Login</div>
+    </div>
+
+    <h1>task 5</h1>
+    <div class="cards-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .flexcontainer {
+            display: flex;
+            background-color: DodgerBlue;
+        }
+
+        .flexcontainer>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #eee;
+            padding: 10px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .products {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: blue;
+            color: white;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            background-color: red;
+            flex-direction: row;
+        }
+
+        .row>div {
+            padding: 10px;
+            text-align: center;
+            background-color: wheat;
+            color: black;
+            font-size: 11px;
+            margin: 10px;
+        }
+
+        .column {
+            display: flex;
+            background-color: red;
+            flex-direction: column;
+        }
+
+        .column>div {
+            padding: 10px;
+            text-align: center;
+            background-color: wheat;
+            color: black;
+            font-size: 11px;
+            margin: 10px;
+        }
+
+        .row-reverse {
+            display: flex;
+            background-color: red;
+            flex-direction: row-reverse;
+        }
+
+        .row-reverse>div {
+            padding: 10px;
+            text-align: center;
+            background-color: wheat;
+            color: black;
+            font-size: 11px;
+            margin: 10px;
+        }
+
+        .column-reverse {
+            display: flex;
+            background-color: red;
+            flex-direction: column-reverse;
+        }
+
+        .column-reverse>div {
+            padding: 10px;
+            text-align: center;
+            background-color: wheat;
+            color: black;
+            font-size: 11px;
+            margin: 10px;
+        }
+
+        .row-nowrap {
+            display: flex;
+            background-color: red;
+            flex-wrap: nowrap;
+        }
+
+        .row-nowrap>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .row-wrap {
+            display: flex;
+            background-color: red;
+            flex-wrap: wrap;
+        }
+
+        .row-wrap>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .row-reversewrap {
+            display: flex;
+            background-color: red;
+            flex-wrap: wrap-reverse;
+        }
+
+        .row-reversewrap>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-short {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: DodgerBlue;
+        }
+
+        .flex-short>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .justify-center {
+            display: flex;
+            background-color: DodgerBlue;
+            justify-content: center;
+        }
+
+        .justify-center>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .justify-start {
+            display: flex;
+            background-color: DodgerBlue;
+            justify-content: flex-start;
+        }
+
+        .justify-start>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .justify-end {
+            display: flex;
+            background-color: DodgerBlue;
+            justify-content: flex-end;
+        }
+
+        .justify-end>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .justify-space-around {
+            display: flex;
+            background-color: DodgerBlue;
+            justify-content: space-around;
+        }
+
+        .justify-space-around>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .justify-space-between {
+            display: flex;
+            background-color: DodgerBlue;
+            justify-content: space-between;
+        }
+
+        .justify-space-between>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .justify-space-evenly {
+            display: flex;
+            background-color: DodgerBlue;
+            justify-content: space-evenly;
+        }
+
+        .justify-space-evenly>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .align-items-container {
+            display: flex;
+            background-color: pink;
+            height: 200px;
+            align-items: center;
+        }
+
+        .align-items-container>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+
+        .align-items-start {
+            display: flex;
+            background-color: pink;
+            height: 200px;
+            align-items: flex-start;
+        }
+
+        .align-items-start>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .align-items-end {
+            display: flex;
+            background-color: pink;
+            height: 200px;
+            align-items: flex-end;
+        }
+
+        .align-items-end>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .align-items-stretch {
+            display: flex;
+            background-color: pink;
+            height: 200px;
+            align-items: stretch;
+        }
+
+        .align-items-stretch>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .align-items-baseline {
+            display: flex;
+            background-color: pink;
+            height: 200px;
+            align-items: baseline;
+        }
+
+        .align-items-baseline>div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .align-content-center {
+            display: flex;
+            height: 600px;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+            overflow: scroll;
+            background-color: DodgerBlue;
+        }
+
+        .align-content-center>div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The flexbox Property</h1>
+
+    <div class="flexcontainer">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h1>The flexbox navigation bar</h1>
+    <div class="navbar">
+        <div class="logo">LOGO</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="login">Login</div>
+    </div>
+
+    <h1>The flexbox 3 cards</h1>
+    <div class="products">
+        <div class="card">Product 1</div>
+        <div class="card">Product 2</div>
+        <div class="card">Product 3</div>
+    </div>
+
+    <h1>The flexbox flexbox row direction</h1>
+    <div class="row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h1>The flexbox flexbox column direction</h1>
+    <div class="column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h1>The flexbox flexbox row-reverse direction</h1>
+    <div class="row-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h1>The flexbox flexbox column-reverse direction</h1>
+    <div class="column-reverse">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h1>The flexbox flex-wrap no-wrap</h1>
+    <div class="row-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h1>The flexbox flex-wrap wrap</h1>
+    <div class="row-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>11</div>
+        <div>12</div>
+        <div>11</div>
+        <div>12</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h1>The flexbox flex-wrap reverse-wrap</h1>
+    <div class="row-reversewrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>11</div>
+        <div>12</div>
+        <div>11</div>
+        <div>12</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h1>The flex-flow Property</h1>
+
+    <p>The flex-flow property is a shorthand property for the flex-direction and the flex-wrap properties.</p>
+
+    <div class="flex-short">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+    <h1>The justify-content Property</h1>
+
+    <p>justify-content: center; aligns the flex items at the center of the container:</p>
+
+    <div class="justify-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>justify-content: center; aligns the flex items at the flex-start of the container:</p>
+
+    <div class="justify-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>justify-content: center; aligns the flex items at the flex-end of the container:</p>
+
+    <div class="justify-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>justify-content: center; aligns the flex items at the space-around of the container:</p>
+
+    <div class="justify-space-around">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>justify-content: center; aligns the flex items at the space-between of the container:</p>
+
+    <div class="justify-space-between">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>justify-content: center; aligns the flex items at the space-evenly of the container:</p>
+
+    <div class="justify-space-evenly">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h1>The align-items Property</h1>
+
+    <p>align-items: center; aligns the flex items in the middle of the container:</p>
+
+    <div class="align-items-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>align-items: center; aligns the flex items in the start of the container:</p>
+
+    <div class="align-items-start">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>align-items: center; aligns the flex items in the end of the container:</p>
+
+    <div class="align-items-end">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>align-items: center; aligns the flex items in the stretch of the container:</p>
+
+    <div class="align-items-stretch">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>align-items: center; aligns the flex items in the baseline of the container:</p>
+
+    <div class="align-items-baseline">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h1>The align-content Property</h1>
+
+    <p>align-content: center; - The flex lines are packed toward the center of the container:</p>
+
+    <div class="align-content-center">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+</body>
+
+</html>

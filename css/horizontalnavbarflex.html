@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            background-color: #111111;
+        }
+
+        ul li a.active {
+            background-color: green;
+        }
+
+
+        ul li {
+            border-right: 5px solid grey;
+        }
+
+        ul li:last-child {
+            border-right: none;
+        }
+        /* ul li {
+            float: left;
+        }
+
+        ul li:last-child {
+            float: right;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <h2>Gray Vertical Navbar</h2>
+
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+</body>
+
+</html>

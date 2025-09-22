@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.block-example {
+  display: block;
+  background: lightblue;
+  margin: 5px 0;
+}
+
+.inline-example {
+  display: inline;
+  background: lightgreen;
+  margin: 5px;
+}
+
+.inline-block-example {
+    display: inline-block;
+    margin: 10px;
+    padding:10px;
+    background-color: pink;
+}
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+  background: lightyellow;
+  padding: 10px;
+}
+
+.flex-item {
+  background: orange;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-rows: auto auto;        /* rows adjust to content */
+  gap: 10px;                             /* space between items */
+  background: lightyellow;
+  padding: 10px;
+}
+
+.grid-item {
+  background: orange;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h3>Block Example</h3>
+<span class="block-example">Block 1</span>
+<span class="block-example">Block 2</span>
+<span class="block-example">Block 3</span>
+
+<h3>Inline Example</h3>
+<span class="inline-example">Inline 1</span>
+<span class="inline-example">Inline 2</span>
+<span class="inline-example">Inline 3</span>
+
+<h3>Inline-Block Example</h3>
+<div class="inline-block-example">Box 1</div>
+<div class="inline-block-example">Box 2</div>
+<div class="inline-block-example">Box 3</div>
+
+
+<h3>Flex Example</h3>
+<div class="flex-container">
+  <div class="flex-item">Item 1</div>
+  <div class="flex-item">Item 2</div>
+  <div class="flex-item">Item 3</div>
+</div>
+
+<h3>Grid Example (2x2 layout)</h3>
+<div class="grid-container">
+  <div class="grid-item">Box 1</div>
+  <div class="grid-item">Box 2</div>
+  <div class="grid-item">Box 3</div>
+  <div class="grid-item">Box 4</div>
+</div>
+
+</body>
+</html>

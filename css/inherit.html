@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 2px solid red;
+}
+
+span {
+  border: inherit;
+}
+
+#grad1 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow);
+}
+
+#grad2 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, rgb(92, 92, 32));
+  margin-top: 50px;
+}
+
+#grad3 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(red, blue);
+  margin-top: 50px;
+}
+
+#grad4 {
+  height: 200px;
+  background-image: radial-gradient(blue, pink, yellow);
+  margin-top: 50px;
+}
+
+#grad5 {
+  height: 200px;
+  background-image: radial-gradient(blue 50%, pink 45%, yellow 5%);
+  margin-top: 50px;
+}
+
+#grad6 {
+  height: 150px;
+  width: 200px;
+  background-image: radial-gradient(circle, red, yellow, green);
+  margin-top: 50px;
+}
+</style>
+</head>
+<body>
+
+<h2>The inherit Keyword</h2>
+
+<div>Here, the <span>span element's</span> border settings will be inherited from the parent element.</div>
+<br>
+
+<div >Here, the <span>span element's</span> border settings will also be inherited from the parent element.</div>
+
+
+<div id="grad1"></div>
+
+
+<div id="grad2"></div>
+
+
+<div id="grad3"></div>
+
+
+<!-- radial gradient -->
+
+<div id="grad4"></div>
+
+<div id="grad5"></div>
+
+<div id="grad6"></div>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 👈 Add this -->
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            /* sidebar + main */
+            grid-template-rows: 60px 1fr 40px;
+            /* header, content, footer */
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            gap: 10px;
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background: lightblue;
+            text-align: center;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: lightgreen;
+        }
+
+        .main {
+            grid-area: main;
+            background: lightyellow;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: lightcoral;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                /* single column */
+                grid-template-rows: auto;
+                /* rows auto-adjust */
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main</div>
+        <div class="footer">Footer</div>
+    </div>
+
+
+</body>
+
+</html>

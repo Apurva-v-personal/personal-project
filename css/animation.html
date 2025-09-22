@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+div.test {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    animation-name: test;
+    animation-duration: 5s;
+    /* animation-delay: 5s; */
+    animation-iteration-count: 2;
+}
+
+@keyframes test {
+    0% {
+        background-color: pink;
+    }
+     50% {
+        background-color: purple;
+    }
+
+    100% {
+        background-color: palevioletred;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<div></div>
+
+<p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+
+
+<div class="test"></div>
+</body>
+</html>
+
+

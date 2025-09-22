@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div.static {
+            position: static;
+            border: 3px solid #73AD21;
+        }
+
+        div.relative {
+            position: relative;
+            left: 20px;
+            background-color: #73AD21;
+            width: 300px;
+        }
+
+        div.fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            height: 200px;
+            background-color: #73AD21;
+            width: 300px;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid red;
+        }
+
+        div.sticky {
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Using position: static;</h2>
+
+    <p>An element with position: static; is always positioned according to the normal flow of the page:</p>
+
+    <div class="static">
+        This div element has position: static;
+    </div>
+
+    <div class="relative">
+        This div element has position: relative;
+    </div>
+
+
+    <div class="fixed">
+        This div element has position: static;
+    </div>
+
+    <div class="absolute">This div element has position: absolute;</div>
+
+
+    <h2>Using position: sticky;</h2>
+
+    <p>Try to scroll this page to understand how sticky works.</p>
+
+    <p>Here, when the sticky element reach the top of the page (top: 0), it sticks to this position!</p>
+
+    <div class="sticky">I have position sticky!</div>
+
+    <div style="padding-bottom:2000px">
+        <p>Scroll back up to remove the stickyness!</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
+            concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+            Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+    </div>
+
+
+</body>
+
+</html>

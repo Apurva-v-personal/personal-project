@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            height: 150px;
+            /* just for demo */
+        }
+
+        .left-box {
+            float: left;
+            width: 120px;
+            height: 120px;
+            background: lightblue;
+            text-align: center;
+            line-height: 120px;
+            font-weight: bold;
+        }
+
+        .right-box {
+            float: right;
+            width: 120px;
+            height: 120px;
+            background: lightcoral;
+            text-align: center;
+            line-height: 120px;
+            font-weight: bold;
+        }
+
+        .text {
+            background: lightyellow;
+            padding: 5px;
+            clear: both;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Float Left & Right Example</h3>
+    <div class="container">
+        <div class="left-box">Left</div>
+        <div class="right-box">Right</div>
+        <div class="text">
+            This is some text in the middle.
+            Notice how the left box is floated left,
+            the right box is floated right,
+            and the text flows in between.
+        </div>
+    </div>
+
+    <!-- <div class="clearfix">
+        <div style="float:left; width:100px; height:100px; background:lightblue;">Left</div>
+        <div style="float:right; width:100px; height:100px; background:lightcoral;">Right</div>
+    </div> -->
+
+    <h2>Grid of Boxes</h2>
+    <p>Float boxes side by side:</p>
+
+    <div class="clearfix">
+        <div class="box" style="background-color:#bbb">
+            <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color:#ccc">
+            <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color:#ddd">
+            <p>Some text inside the box.</p>
+        </div>
+    </div>
+
+    <p><strong>Note:</strong> Here, we use the clearfix hack to take care of the layout flow.
+        We also use the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove
+        this code to see the effect.</p>
+
+</body>
+
+</html>
